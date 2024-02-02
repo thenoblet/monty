@@ -139,22 +139,21 @@ int is_integer(const char *str)
 		return (0);
 
 	if (*str == '-' || *str == '+')
-		str++; /* moved past the sign */
+		str++;
 
 	while (*str != '\0')
 	{
 		if (is_digit(*str))
 		{
-			str++; /* we found a number, keep searching */
+			str++;
 			numbers++;
 		}
 		else
-			return (0); /* non-integer found */
+			return (0);
 	}
-
 	if (numbers == 0)
 		return (0);
 
-	return (1); /* if we got this far, it's definitely an integer */
+	return (1);
 }
 
